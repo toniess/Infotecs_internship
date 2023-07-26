@@ -4,4 +4,17 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(Program_2)
 
-add_executable(Program_2 sources/main.cpp)
+include_directories(source)
+
+set(SOURCES
+    sources/main.cpp
+    sources/client.cpp
+    sources/receivehandler.cpp
+)
+
+set(HEADERS
+    sources/client.h
+    sources/receivehandler.h
+)
+
+add_executable(Program_2 ${SOURCES} ${HEADERS})
